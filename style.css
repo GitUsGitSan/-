@@ -349,7 +349,7 @@ nav a.active::after {
         linear-gradient(
             100deg,
             #123b7a,
-            #75ad35
+            #353fad
         );
 
     -webkit-background-clip: text;
