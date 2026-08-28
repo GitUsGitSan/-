@@ -349,7 +349,7 @@ nav a.active::after {
         linear-gradient(
             100deg,
             #123b7a,
-            #66FF00
+            #75ad35
         );
 
     -webkit-background-clip: text;
@@ -1268,7 +1268,324 @@ nav a.active::after {
     box-shadow: none;
 }
 
+/* =====================================================
+   CONTACT
+===================================================== */
 
+.contact {
+    padding-top: 100px;
+    padding-bottom: 120px;
+}
+
+
+/* GRID */
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+
+/* CARD */
+
+.contact-card {
+    position: relative;
+
+    display: block;
+
+    min-height: 420px;
+
+    padding: 40px;
+
+    border-radius: 35px;
+
+    color: white;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 25px 60px rgba(20,40,80,.15);
+
+    transition: .45s;
+}
+
+
+/* Backgrounds */
+
+.contact-card:nth-child(1) {
+    background:
+        linear-gradient(
+            145deg,
+            #123b7a,
+            #1f559f
+        );
+}
+
+.contact-card:nth-child(2) {
+    background:
+        linear-gradient(
+            145deg,
+            #628f2d,
+            #8bbb46
+        );
+}
+
+
+/* Decorative circle */
+
+.contact-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    border-radius: 50%;
+
+    right: -120px;
+    top: -120px;
+
+    background: rgba(255,255,255,.08);
+
+    transition: .5s;
+}
+
+
+.contact-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    border-radius: 50%;
+
+    left: -90px;
+    bottom: -100px;
+
+    background: rgba(255,255,255,.05);
+}
+
+
+/* Hover */
+
+.contact-card:hover {
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 35px 75px rgba(20,40,80,.22);
+}
+
+.contact-card:hover::before {
+    transform: scale(1.15);
+}
+
+
+/* TOP */
+
+.contact-card-top {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 40px;
+}
+
+
+/* ICON */
+
+.contact-icon {
+    width: 70px;
+    height: 70px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 22px;
+
+    background: rgba(255,255,255,.14);
+
+    border:
+        1px solid
+        rgba(255,255,255,.20);
+
+    backdrop-filter: blur(10px);
+
+    font-size: 30px;
+}
+
+
+/* NUMBER */
+
+.contact-number {
+    font-size: 14px;
+
+    font-weight: 800;
+
+    opacity: .55;
+}
+
+
+/* LABEL */
+
+.contact-label {
+    position: relative;
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    opacity: .7;
+}
+
+
+/* TITLE */
+
+.contact-card h3 {
+    position: relative;
+
+    font-size: 48px;
+
+    line-height: 1.1;
+
+    margin-bottom: 20px;
+}
+
+
+/* TEXT */
+
+.contact-card p {
+    position: relative;
+
+    max-width: 480px;
+
+    color: rgba(255,255,255,.78);
+
+    font-size: 16px;
+
+    line-height: 1.9;
+
+    margin-bottom: 30px;
+}
+
+
+/* EMAIL */
+
+.contact-email {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-top: auto;
+
+    padding-top: 20px;
+
+    border-top:
+        1px solid
+        rgba(255,255,255,.18);
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    word-break: break-word;
+}
+
+
+.contact-email span {
+    flex-shrink: 0;
+
+    font-size: 24px;
+
+    transition: .3s;
+}
+
+
+.contact-card:hover .contact-email span {
+    transform: translateX(7px);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 850px) {
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .contact {
+        padding-top: 85px;
+        padding-bottom: 90px;
+    }
+
+    .contact-card {
+        min-height: 380px;
+
+        padding: 30px;
+    }
+
+    .contact-card h3 {
+        font-size: 42px;
+    }
+
+    .contact-card p {
+        font-size: 15px;
+    }
+
+    .contact-email {
+        font-size: 13px;
+    }
+
+}
+
+
+@media (max-width: 430px) {
+
+    .contact-card {
+        min-height: 350px;
+
+        padding: 25px;
+    }
+
+    .contact-icon {
+        width: 60px;
+        height: 60px;
+
+        font-size: 25px;
+    }
+
+    .contact-card h3 {
+        font-size: 38px;
+    }
+
+}
 /* =====================================================
    FOOTER
 ===================================================== */
